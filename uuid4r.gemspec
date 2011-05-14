@@ -1,4 +1,4 @@
-Gem::Specification.new do |s|  
+Gem::Specification.new do |s|
   s.name    = "uuid4r"
   s.version = "0.1.1"
   s.author  = "Daigo Moriwaki"
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
     (random number based) and version 5 (name based, SHA-1).
   EOF
   s.homepage = "http://uuid4r.rubyforge.org"
-  
+
   s.files = Dir['ext/extconf.rb', 'ext/*.c', 'test/**/*']
   s.require_path = '.'
   s.extensions << "ext/extconf.rb"

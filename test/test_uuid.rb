@@ -6,12 +6,12 @@ class UUIDTest < Test::Unit::TestCase
     assert_kind_of(String, UUID4R::uuid_v1)
     assert_kind_of(String, UUID4R::uuid(1))
   end
-  
+
   def test_uuid_v4_default
     assert_kind_of(String, UUID4R::uuid_v4)
     assert_kind_of(String, UUID4R::uuid(4))
   end
-  
+
   def test_uuid_v1_str
     assert_kind_of(String, UUID4R::uuid_v1(:str))
     assert(UUID4R::uuid_v1(:str).length > 0)
@@ -29,7 +29,7 @@ class UUIDTest < Test::Unit::TestCase
     assert(/version: 1/ =~ UUID4R::uuid_v1(:txt))
     assert(/content:/ =~ UUID4R::uuid_v1(:txt))
   end
-  
+
   def test_uuid_v3_str
     a = UUID4R::uuid(3, "ns:URL", "www.sgtpepper.net", :str)
     b = UUID4R::uuid(3, "ns:URL", "www.sgtpepper.net", :str)
@@ -41,7 +41,7 @@ class UUIDTest < Test::Unit::TestCase
     assert_equal(a, c)
     assert_equal(a, d)
   end
-  
+
   def test_uuid_v5_str
     a = UUID4R::uuid(5, "ns:URL", "www.sgtpepper.net", :str)
     b = UUID4R::uuid(5, "ns:URL", "www.sgtpepper.net", :str)
