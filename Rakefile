@@ -1,9 +1,9 @@
 require 'rubygems'
 require 'rake/gempackagetask'
 
-spec = Gem::Specification.new do |s|  
+spec = Gem::Specification.new do |s|
   s.name    = "uuid4r"
-  s.version = "0.1.1"
+  s.version = "0.1.2"
   s.author  = "Daigo Moriwaki"
   s.email   = "daigo@debian.org"
   s.rubyforge_project = "uuid4r"
@@ -19,7 +19,7 @@ spec = Gem::Specification.new do |s|
     (random number based) and version 5 (name based, SHA-1).
   EOF
   s.homepage = "http://uuid4r.rubyforge.org"
-  
+
   s.files = FileList['ext/extconf.rb', 'ext/*.c', 'test/**/*'].to_a
   s.require_path = '.'
   s.extensions << "ext/extconf.rb"
@@ -30,7 +30,7 @@ spec = Gem::Specification.new do |s|
   s.rdoc_options << '--title' << 'UUID4R' <<
                     '--main' << 'README' <<
                     '--line-numbers'
-end    
+end
 
 Rake::GemPackageTask.new(spec) do |pkg|
   pkg.need_tar = true
