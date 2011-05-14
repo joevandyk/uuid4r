@@ -1,4 +1,6 @@
 # -*- encoding: utf-8 -*-
+require 'rake'
+
 $:.push File.expand_path("../ext", __FILE__)
 spec = Gem::Specification.new do |s|
   s.name    = "uuid4r"
@@ -19,7 +21,7 @@ spec = Gem::Specification.new do |s|
   EOF
   s.homepage = "http://uuid4r.rubyforge.org"
 
-  s.files = ['ext/extconf.rb', 'ext/*.c', 'test/**/*']
+  s.files = FileList['ext/extconf.rb', 'ext/*.c', 'test/**/*'].to_a
   s.require_path = '.'
   s.extensions << "ext/extconf.rb"
   s.test_files = ['test/test_uuid.rb']
